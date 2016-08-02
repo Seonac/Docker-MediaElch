@@ -10,6 +10,7 @@ cat <<'EOT' > /etc/my_init.d/04_MediaElch_config.sh
 ## Create Directories needed
 [[ ! -d /config/config/ ]] && mkdir /config/config -p
 [[ ! -d /config/log/ ]] && mkdir -p /config/log/
+ [[ ! -d /config/images/ ]] && mkdir -p  /config/images/
 [[ ! -d /nobody/.config/kvibes/ ]] && mkdir -p /nobody/.config/kvibes/
 [[ ! -d /nobody/.local/share/kvibes/MediaElch/ ]] && mkdir -p /nobody/.local/share/kvibes/MediaElch/ 
 ## Copy needed config files
@@ -30,7 +31,7 @@ EOT
 # Add repository for kvibe MediaElch  
 add-apt-repository ppa:kvibes/mediaelch 
 ## Apt-Get MediaElch
-apt-get update && apt-get install -qy mediaelch
+apt-get update -qq && apt-get install -qqy mediaelch
 
 #Copy startapp.sh script
 chmod +x /startapp.sh

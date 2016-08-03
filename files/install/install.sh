@@ -16,7 +16,7 @@ cat <<'EOT' > /etc/my_init.d/04_MediaElch_config.sh
 ## Copy needed config files
 [[ ! -e /config/config/MediaElch.conf ]] && cp /MediaElch_Config/MediaElch.conf /config/config/MediaElch.conf
 [[ ! -e /config/MediaElch.sqlite ]] && cp /MediaElch_Config/MediaElch.sqlite /config/MediaElch.sqlite
-[[ ! -e /config/config/advancedsettings.xml ]] && cp /MediaElch_Config/advancedsettings.xml /config/advancedsettings.xml
+[[ ! -e /config/advancedsettings.xml ]] && cp /MediaElch_Config/advancedsettings.xml /config/advancedsettings.xml
 [[ ! -e /config/log/MediaElch.log ]]  && touch /config/log/MediaElch.log
 ## Create symlinks to files and directories used by MediaElch
 [[ ! -L /nobody/.config/kvibes/MediaElch.conf ]] && ln -s /config/config/MediaElch.conf /nobody/.config/kvibes/MediaElch.conf

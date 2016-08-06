@@ -16,8 +16,8 @@ ENV GROUP_ID=100
 ENV APP_NAME="MediaElch"
 
 # Default resolution, change if you like
-ENV WIDTH=800
-ENV HEIGHT=600
+ENV WIDTH=1280
+ENV HEIGHT=720
 
 ENV TERM="xterm"
 
